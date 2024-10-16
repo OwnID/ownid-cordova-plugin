@@ -1,0 +1,22 @@
+{
+  "name": "@ownid/cordova-plugin",
+  "version": "3.5.1",
+  "description": "An OwnID Cordova plugin for Android and iOS",
+  "cordova": {
+    "id": "@ownid/cordova-plugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "OwnID",
+    "passkey",
+    "passkeys",
+    "passwordless"
+  ],
+  "author": "OwnID Team <support@ownid.com>",
+  "license": "Apache-2.0"
+}

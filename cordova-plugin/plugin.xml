@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cordova-plugin-ownid" version="3.5.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>OwnID</name>
+
+    <description>Cordova plugin for OwnID</description>
+
+    <license>Apache 2.0 License</license>
+
+    <keywords>cordova, ownid</keywords>
+    <repo>https://github.com/OwnID/ownid-cordova-plugin</repo>
+
+    <engines>
+        <engine name="cordova" version=">=10.0.0" />
+        <engine name="cordova-android" version=">=12.0.0" />
+        <engine name="cordova-ios" version=">=7.1.0" />
+    </engines>
+
+    <js-module src="www/init.js" name="ownid">
+        <runs />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="OwnIDCordovaPlugin">
+                <param name="android-package" value="com.ownid.sdk.cordova.OwnIDCordovaPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <framework src="com.ownid.android-sdk:core:3.5.1" />
+
+        <source-file src="src/android/com/ownid/sdk/cordova/OwnIDCordovaPlugin.java"
+            target-dir="src/com/ownid/sdk/cordova" />
+    </platform>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="OwnIDCordovaPlugin">
+                <param name="ios-package" value="OwnIDCordovaPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <podspec>
+            <pods use-frameworks="true">
+                <pod name="ownid-core-ios-sdk" version="~> 3.5.1" />
+            </pods>
+        </podspec>
+
+        <source-file src="src/ios/OwnIDCordovaPlugin.swift" />
+    </platform>
+</plugin>

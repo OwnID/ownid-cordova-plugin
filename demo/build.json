@@ -1,0 +1,16 @@
+{
+    "android": {
+        "debug": {
+            "keystore": "OwnID-Demo-Key.jks",
+            "storePassword": "OwnID-Demo-Key",
+            "alias": "ownid-demo-key-alias",
+            "password": "OwnID-Demo-Key"
+        },
+        "release": {
+            "keystore": "OwnID-Demo-Key.jks",
+            "storePassword": "OwnID-Demo-Key",
+            "alias": "ownid-demo-key-alias",
+            "password": "OwnID-Demo-Key"
+        }
+    }
+}

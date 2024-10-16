@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline';">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <title>OwnID Cordova Demo App</title>
+</head>
+
+<body>
+    <div id="login-page" class="app">
+        <h1>Login</h1>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required><br>
+            <input type="password" id="login-password" placeholder="Password" required><br>
+            <button type="button" onclick="login()">Login</button>
+            <p id="login-error" style="color: red;"></p>
+            <p>Don't have an account? <a href="#" onclick="showRegistrationPage()">Register</a></p>
+        </form>
+        <button type="button" onclick="startElite()">Launch Elite</button>
+    </div>
+
+    <div id="registration-page" class="app" style="display:none;">
+        <h1>Register</h1>
+        <form id="registration-form">
+            <input type="text" id="register-name" placeholder="Name" required><br>
+            <input type="email" id="register-email" placeholder="Email" required><br>
+            <input type="password" id="register-password" placeholder="Password" required><br>
+            <button type="button" onclick="register()">Register</button>
+            <p id="register-error" style="color: red;"></p>
+            <p>Already have an account? <a href="#" onclick="showLoginPage()">Login</a></p>
+        </form>
+    </div>
+
+    <div id="user-page" class="app" style="display:none;">
+        <h2>
+            <p id="user-email"></p>
+        </h2>
+        <button type="button" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
