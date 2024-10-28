@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="cordova-plugin-ownid" version="3.5.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+<plugin id="@ownid/cordova-plugin" version="3.5.2" xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <name>OwnID</name>

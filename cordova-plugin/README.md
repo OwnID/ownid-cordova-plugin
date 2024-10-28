@@ -39,6 +39,50 @@ Ensure that you set schema and hostname:
 </widget>
 ``` 
 
+#### Android Settings
+
+If you are using Cordova Android version 12.x, please follow these steps:
+
+1. Set the Target SDK Version
+
+   Ensure that your target SDK version is set to at least 34:
+   ```
+   <widget>
+     <preference name="android-targetSdkVersion" value="34" />
+   </widget>
+   ```
+
+2. Configure Android Gradle Plugin and Gradle
+
+   a. Upgrade to Android Gradle Plugin ≥ 8.1.0 and Gradle ≥ 8.0
+
+      Update your project to use Android Gradle Plugin version 8.1.0 or higher, and Gradle version 8.0 or higher:
+      ```
+      <widget>
+         <preference name="AndroidGradlePluginVersion" value="8.1.0" />
+         <preference name="GradleVersion" value="8.0" />
+      </widget>
+      ```
+
+   b. Workaround if You Cannot Upgrade
+      
+      If you cannot upgrade to Android Gradle Plugin, you can use a workaround to address this [bug](https://r8-review.googlesource.com/c/r8/+/79240) by adding a hook that sets the R8 dependency to `com.android.tools:r8:8.1.56`:
+
+      * **Copy the Hook Script**
+
+        Copy the `android_hook_r8.js` file with the hook script into your project. You can find it in `demo/android_hook_r8.js`.
+
+      * **Reference the Hook in `config.xml`**
+
+        Add the following to your `config.xml` to reference the hook script:
+         ```
+         <widget>
+            <platform name="android">
+               <hook type="after_prepare" src="android_hook_r8.js" />
+            </platform>
+         </widget>
+         ``` 
+
 #### iOS Specific Settings
 
 The iOS platform-specific settings include preferences for iOS and Swift versions, as well as configuration for associated domains - necessary steps for enabling Passkey authentication. To learn more, see [Enable Passkey Authentication](https://github.com/OwnID/ownid-ios-sdk/blob/master/Docs/sdk-custom-integration.md#enable-passkey-authentication).
@@ -67,10 +111,11 @@ Update your `config.xml` with following:
 </platform>
 ``` 
 
-### Supported Platforms
+## Web Integration
 
- - iOS
- - Android
+Integration with a Cordova app follows the same process as for regular web applications. For detailed steps, refer to our [integration guide](https://docs.ownid.com/building-blocks/get-started).
+
+Note: You can skip the "Reference the OwnID SDK" section, as plugin includes it by default.
 
 ## License
 

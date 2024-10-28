@@ -1,7 +1,7 @@
 {
   "name": "com.ownid.demo.gigya",
   "displayName": "OwnId Cordova Demo",
-  "version": "3.5.1",
+  "version": "3.5.2",
   "description": "OwnId Cordova plugin demo app",
   "main": "index.js",
   "scripts": {},
@@ -12,8 +12,8 @@
   "author": "OwnID",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@ownid/cordova-plugin": "file:../cordova-plugin",
-    "cordova-android": "^13.0.0",
+    "@ownid/cordova-plugin": "^3.5.2",
+    "cordova-android": "^12.0.1",
     "cordova-ios": "^7.1.1",
     "cordova-plugin-whitelist": "^1.3.4"
   },
