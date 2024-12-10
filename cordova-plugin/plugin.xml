@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="@ownid/cordova-plugin" version="3.5.2" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+<plugin id="@ownid/cordova-plugin" version="3.6.3" xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <name>OwnID</name>
@@ -29,7 +29,7 @@
             </feature>
         </config-file>
 
-        <framework src="com.ownid.android-sdk:core:3.5.1" />
+        <framework src="com.ownid.android-sdk:core:3.6.3" />
 
         <source-file src="src/android/com/ownid/sdk/cordova/OwnIDCordovaPlugin.java"
             target-dir="src/com/ownid/sdk/cordova" />
@@ -45,7 +45,7 @@
 
         <podspec>
             <pods use-frameworks="true">
-                <pod name="ownid-core-ios-sdk" version="~> 3.5.1" />
+                <pod name="ownid-core-ios-sdk" version="~> 3.6.3" />
             </pods>
         </podspec>
 

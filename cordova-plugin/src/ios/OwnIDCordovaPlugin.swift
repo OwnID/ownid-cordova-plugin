@@ -108,6 +108,6 @@ import OwnIDCoreSDK
     }
 
     private static func info() -> OwnID.CoreSDK.SDKInformation {
-        ("OwnIDCordovaPlugin", "3.5.2")
+        ("OwnIDCordovaPlugin", "3.6.3")
     }
 }

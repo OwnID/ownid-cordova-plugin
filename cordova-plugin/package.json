@@ -1,6 +1,6 @@
 {
   "name": "@ownid/cordova-plugin",
-  "version": "3.5.2",
+  "version": "3.6.3",
   "description": "An OwnID Cordova plugin for Android and iOS",
   "cordova": {
     "id": "@ownid/cordova-plugin",

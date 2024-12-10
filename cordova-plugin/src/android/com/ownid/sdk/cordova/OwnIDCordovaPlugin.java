@@ -20,7 +20,7 @@ import java.util.HashSet;
 
 public class OwnIDCordovaPlugin extends CordovaPlugin {
 
-    private static final String PRODUCT_NAME = "OwnIdCordovaPlugin/3.5.2";
+    private static final String PRODUCT_NAME = "OwnIdCordovaPlugin/3.6.3";
 
     private JSONObject ownIdConfig;
 
